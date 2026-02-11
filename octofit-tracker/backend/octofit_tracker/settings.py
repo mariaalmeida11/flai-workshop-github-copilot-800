@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'octofit_tracker',
     'rest_framework',
     'corsheaders',
-    'django', 
-
+    'djongo',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +80,7 @@ WSGI_APPLICATION = 'octofit_tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django',
+        'ENGINE': 'djongo',
         'NAME': 'octofit_db',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
