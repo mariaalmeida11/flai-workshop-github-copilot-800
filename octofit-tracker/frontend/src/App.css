@@ -1,0 +1,522 @@
+/* Global App Styles */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navbar Styling */
+.navbar {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  padding: 0.75rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700 !important;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: rotate(360deg);
+}
+
+.nav-link {
+  font-weight: 600;
+  margin: 0 0.5rem;
+  color: #ffffff !important;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffa500);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+}
+
+.nav-link:hover {
+  color: #ffd700 !important;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+.nav-link.active {
+  color: #ffd700 !important;
+  font-weight: 700;
+}
+
+/* Container Styling */
+.container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.display-3, .display-4 {
+  background: linear-gradient(135deg, #ffd700 0%, #ffa500 50%, #ff6347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.lead {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5);
+  border-color: #667eea;
+}
+
+.card-title {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.card-text {
+  color: #5a6c7d;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.card-footer {
+  background: transparent;
+  border-top: 2px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Table Styling */
+.table-responsive {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.table {
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+}
+
+.table thead th {
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.table tbody tr {
+  transition: all 0.3s;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.table tbody tr:hover {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.table td {
+  padding: 1rem;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+}
+
+.badge:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.badge.bg-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.badge.bg-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%) !important;
+}
+
+.badge.bg-danger {
+  background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%) !important;
+}
+
+.badge.bg-warning {
+  background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%) !important;
+}
+
+.badge.bg-info {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%) !important;
+}
+
+.badge.bg-secondary {
+  background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%) !important;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #f2994a 0%, #f2c94c 100%);
+  color: #fff;
+}
+
+.btn-info {
+  background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+}
+
+.btn-outline-primary {
+  border: 2px solid #667eea;
+  color: #667eea;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.btn-outline-light {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+}
+
+.btn-outline-light:hover {
+  background: white;
+  color: #667eea;
+  border-color: white;
+}
+
+/* List Group Styling */
+.list-group-item {
+  border: none;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.list-group-item:hover {
+  border-left-color: #667eea;
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.list-group-item strong {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Jumbotron/Hero Section */
+.jumbotron {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.1;
+}
+
+.jumbotron > * {
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron h1 {
+  color: white !important;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  -webkit-text-fill-color: white;
+}
+
+.jumbotron .lead {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
+}
+
+.jumbotron hr {
+  border-color: rgba(255, 255, 255, 0.4);
+  border-width: 2px;
+}
+
+.jumbotron p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Link Styling */
+a {
+  color: #667eea;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #764ba2;
+  text-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+.text-decoration-none:hover {
+  opacity: 0.9;
+}
+
+/* Loading and Error States */
+.text-danger {
+  font-weight: 500;
+}
+
+.alert {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+}
+
+.alert-info {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar-logo {
+    height: 30px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .jumbotron {
+    padding: 2rem 1rem;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.badge:hover {
+  animation: pulse 0.6s ease-in-out;
+}
+
+/* Additional color enhancements */
+.bg-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+  color: white !important;
+}
+
+.text-primary {
+  color: #667eea !important;
+}
+
+.text-success {
+  color: #38ef7d !important;
+}
+
+.text-danger {
+  color: #ee0979 !important;
+}
+
+.text-warning {
+  color: #f2994a !important;
+}
+
+.text-info {
+  color: #0072ff !important;
+}
